@@ -6,21 +6,19 @@ public class Avion {
     private MotorDeAvion motorIzquierdo;
     private MotorDeAvion motorDerecho;
     private SistemaDeControlDeVuelo sistemaDeControlDeVuelo;
-    private Ala alaIzquierda;
-    private Ala alaDerecha;
+    private Ala[] alas;
     private int numeroDeAsientos;
     private boolean sistDeEntretenimiento;
 
     public Avion(String marca, String modelo, MotorDeAvion motorDerecho, MotorDeAvion motorIzquierdo,
             SistemaDeControlDeVuelo sistemaDeControlDeVuelo,
-            Ala alaIzquierda, Ala alaDerecha, Integer numeroDeAsientos, boolean sistDeEntretenimiento) {
+            Ala[] alas, Integer numeroDeAsientos, boolean sistDeEntretenimiento) {
         this.marca = marca;
         this.modelo = modelo;
         this.motorIzquierdo = motorIzquierdo;
         this.motorDerecho = motorDerecho;
         this.sistemaDeControlDeVuelo = sistemaDeControlDeVuelo;
-        this.alaIzquierda = alaIzquierda;
-        this.alaDerecha = alaDerecha;
+        this.alas = alas;
         this.numeroDeAsientos = numeroDeAsientos;
         this.sistDeEntretenimiento = sistDeEntretenimiento;
     }
@@ -41,6 +39,10 @@ public class Avion {
         this.modelo = modelo;
     }
 
+    public Ala[] getAlas() {
+        return alas;
+    }
+
     public MotorDeAvion motorIzquierdo() {
         return motorIzquierdo;
     }
@@ -55,22 +57,6 @@ public class Avion {
 
     public void setSistemaDeControlDeVuelo(SistemaDeControlDeVuelo sistemaDeControlDeVuelo) {
         this.sistemaDeControlDeVuelo = sistemaDeControlDeVuelo;
-    }
-
-    public Ala getAlaIzquierda() {
-        return alaIzquierda;
-    }
-
-    public void setAlaIzquierda(Ala alaIzquierda) {
-        this.alaIzquierda = alaIzquierda;
-    }
-
-    public Ala getAlaDerecha() {
-        return alaDerecha;
-    }
-
-    public void setAlaDerecha(Ala alaDerecha) {
-        this.alaDerecha = alaDerecha;
     }
 
     public int getNumeroDeAsientos() {
